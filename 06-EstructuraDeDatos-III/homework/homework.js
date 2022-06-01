@@ -39,34 +39,34 @@ BinarySearchTree.prototype.size = function () {
 
 BinarySearchTree.prototype.insert = function (value) {
   const newRoot = new BinarySearchTree(value);
-  // if (this.value < value) {
-  //   if (!this.right) {
-  //     this.right = newRoot;
-  //   }
-  //   this.right.insert(value)
-  // }
-  // if (this.value > value) {
-  //   if (!this.left) {
-  //     this.left = newRoot;
-  //   }
-  //   this.left.insert(value);
-  // }
-  if(this.value > value) {
-    if(this.left) {
-      this.left.insert(value)
-    }
-    else {
-      this.left = newRoot;
-    }
-  }
-  if(this.value < value ){
-    if(this.right){
-      this.right.insert(value);
-    }
-    else {
+  if (this.value < value) {
+    if (!this.right) {
       this.right = newRoot;
     }
+    this.right.insert(value)
   }
+  if (this.value > value) {
+    if (!this.left) {
+      this.left = newRoot;
+    }
+    this.left.insert(value);
+  }
+  // if(this.value > value) {
+  //   if(this.left) {
+  //     this.left.insert(value)
+  //   }
+  //   else {
+  //     this.left = newRoot;
+  //   }
+  // }
+  // if(this.value < value ){
+  //   if(this.right){
+  //     this.right.insert(value);
+  //   }
+  //   else {
+  //     this.right = newRoot;
+  //   }
+  // }
   
 
 
